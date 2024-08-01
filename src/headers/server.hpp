@@ -2,12 +2,19 @@
 #define LIGHTBALANCER_SERVER_HPP
 #pragma once
 
-struct SERVER_MAPPING_PTR {
-    
-};
+class Logger;
+struct CONFIG;
+#define CONFIG_PTR CONFIG*
 
-struct THREAD_PTR {
-    
+class LightBalancerServer {
+    public:
+        LightBalancerServer(CONFIG_PTR config);
+        ~LightBalancerServer();
+        void start();
+        void stop();
+    private:
+        Logger* logger;
+        CONFIG_PTR config;
 };
 
 #endif

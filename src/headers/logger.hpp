@@ -1,7 +1,9 @@
 #ifndef LIGHTBALANCER_LOGGER_HPP
 #define LIGHTBALANCER_LOGGER_HPP
 #pragma once
-#include "config.hpp"
+
+struct LOGGER_INFO;
+#define LOGGER_INFO_PTR LOGGER_INFO*
 
 class Logger {
     public:

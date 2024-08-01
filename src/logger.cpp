@@ -1,4 +1,5 @@
 #include "logger.hpp"
+#include "config.hpp"
 #include <ctime>
 #include <iostream>
 
@@ -25,7 +26,7 @@ void Logger::log(std::string message) {
         fprintf(log_file, "%s\n", message.c_str());
         fclose(log_file);
     }
-    if (this->logger_info->stdoutput) {
+    if (this->logger_info->log_level == "VERBOSE" || this->logger_info->log_level == "verbose") {
         std::cout << message << std::endl;
     }
 }
@@ -38,7 +39,7 @@ void Logger::error(std::string error) {
         fprintf(error_file, "%s\n", error.c_str());
         fclose(error_file);
     }
-    if (this->logger_info->stdoutput) {
+    if (this->logger_info->log_level == "VERBOSE" || this->logger_info->log_level == "verbose") {
         std::cerr << "[" << timestamp << "] \033[1;33m" << error << "\033[0m" << std::endl;
     }
 }
