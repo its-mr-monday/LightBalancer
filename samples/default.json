@@ -3,23 +3,8 @@
         "port": 80,
         "interface": "0.0.0.0"
     },
-    "endpoints": [
-        {
-            "ip": "192.168.10.12",
-            "port": 8000
-        },
-        {
-            "ip": "dnsname.com",
-            "port": 8002
-        },
-        {
-            "ip": "dns2.ca",
-            "port": 8000
-        },
-        {
-            "ip": "comcast.net",
-            "port": 8003
-        }
+    "enppoints": [
+
     ],
     "ssl": {
         "enabled": false,
